@@ -4,8 +4,9 @@ import Stack from '@mui/material/Stack';
 import { deepOrange } from '@mui/material/colors';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 
-const Slide=()=>{
-  
+
+const Slide=(props)=>{
+ 
     const slides=document.querySelectorAll(".dom");
     let activeSlide=null;
         slides.forEach((slide)=>{
@@ -17,7 +18,6 @@ const Slide=()=>{
               activeSlide=slide;  // Mettre à jour la référence de la diapositive active
         })
     })
-    
     
     return(
         <>
@@ -33,14 +33,14 @@ const Slide=()=>{
                 </div>
                  <ul className="nav flex-column">
                     <li className=" btn nav-item">
-                        <div className="btn dom">
+                        <div className="btn dom" onClick={()=>props.isComponent("overview")}>
                             <i className="bi bi-bar-chart-fill"></i>
                             <span className=" item " aria-current="page" > OverView</span>
                         </div>
                     </li>
                     
                     <li className=" btn nav-item">
-                        <div className="btn dom">
+                        <div className="btn dom"onClick={()=>props.isComponent("customers")}>
 
                             <i className="bi bi-people-fill"></i>
                             <span className="item " aria-current="page" >Customers</span>
@@ -48,7 +48,7 @@ const Slide=()=>{
                     </li>
                     
                     <li className="btn nav-item">
-                        <div className="btn dom">
+                        <div className="btn dom"onClick={()=>props.isComponent("projets")}>
 
                             <i className="bi bi-stack"></i>
                             <span className="item " aria-current="page" >Mes Projets</span>
@@ -56,7 +56,7 @@ const Slide=()=>{
                     </li>
                     
                     <li className="btn nav-item">
-                        <div className="btn dom">
+                        <div className="btn dom"onClick={()=>props.isComponent("task")}>
 
                             <i className="bi bi-share-fill"></i>
                             <span className="item " aria-current="page" >Mes Tâches</span>
@@ -64,14 +64,14 @@ const Slide=()=>{
                     </li>
                 
                     <li className="btn nav-item ">
-                        <div className="btn dom">
+                        <div className="btn dom" onClick={()=>props.isComponent("cdc")}>
                             <i className="bi bi-filetype-pdf"></i>
                             <span className="item " aria-current="page" >Papier cdc</span>
                         </div>
                     </li>
                    
                     <li className="btn nav-item">
-                        <div className="btn dom">
+                        <div className="btn dom" onClick={()=>props.isComponent("calendar")}>
 
                             <i className="bi bi-calendar2-event"></i>
                             <span className="item " aria-current="page" >Calendar</span>
