@@ -207,3 +207,9 @@ nav i{
 .overview{
   margin-left: 0.3rem;
 }
+.breadcrumb li a{
+  color: orange;
+}
+.breadcrumb {
+  margin: 1rem;
+}
