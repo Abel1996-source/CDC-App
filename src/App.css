@@ -1,38 +1,195 @@
-.App {
-  text-align: center;
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+body{
+  box-sizing: border-box;
+  background-color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*------------------------------------------------------------------------------------
+            Navbar.jsx
+--------------------------------------------------------------------------*/
+.navbar{
+ background-color: black;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.avatar{
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav i{
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.form-search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  object-fit: cover;
+}
+.avatar{
+  height: 60px;
+  width: 70px;
+  object-fit: cover;
+  
+}
+.avatar-1 img{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  object-fit: cover;
+  margin: 0.5rem;
+}
+.avatar-1 span h5{
+  font-size: 12px;
+}
+.avatar-1 span{
+  margin: 0.5rem;
+}
+.avatar-1{
+  display: flex;
+  
+}
+.recent-{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border-bottom: 1px solid #FFF;
+  cursor: pointer;
+}
+.recent-:hover{
+  transition: 0.5s all ease-out ;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.recent- a{
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align: center;
+}
+.recent-:hover a{
+  transition: 0.5s all ease-out ;
+  color: #FFF;
+}
+.dropstart ul li {
+  text-align: center;
+  cursor: pointer;
+  margin: 1rem;
+  padding: 0.2rem;
+}
+.dropstart ul li:hover{
+  text-align: center;
+  margin: 1rem;
+  padding: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+.dropstart ul li a{
+  text-decoration: none;
+  color: #fff;
+  
+}
+/*------------------------------------------------------------------------------------
+            loyout.jsx
+--------------------------------------------------------------------------*/
+.loyout{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.navbar-loyout{
+  width: 87%;
+  height: 10%;
+}
+.navbar-loyout.active{
+  width: 92%;
+  height: 10%;
+}
+.slide-loyout{
+  width: 13%;
+  height: 100%;
+}
+.slide-loyout.active{
+  width: 8%;
+  height: 100%;
+}
+/*------------------------------------------------------------------------------------
+            Slide.jsx
+--------------------------------------------------------------------------*/
+.slide{
+  width: 100%;
+  height: 702px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+  padding: 1.5rem;
+  cursor: pointer;
+}
+.flex-column li{
+  padding: 0.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-column li div i{
+  font-size: 1.1rem;
+  color: #fff;
+}
+.flex-column{
+  height: 100%;
+}
+.flex-column li div{
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  font-size: 15px;
+}
+.flex-column li div i{
+  margin-right:0.5rem ;
+}
+.flex-column li div:hover{
+  color: #fff;
+  background-color: rgba(250, 243, 243, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.flex-column li div{
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+}
+.flex-column li div.active{
+    background-color: rgba(245, 16, 16, 0.8);
+    color: rgba(255, 255, 255, 1);
+    display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/*------------------------------------------------------------------------------------
+            Notification.jsx
+--------------------------------------------------------------------------*/
+.Notifi{
+  margin: 1rem;
+}
+
+/*------------------------------------------------------------------------------------
+            help.jsx
+--------------------------------------------------------------------------*/
+.helping{
+  padding: 1rem;
+}
+.form-check{
+  cursor: pointer;
 }
