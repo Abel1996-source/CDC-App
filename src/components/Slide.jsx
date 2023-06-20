@@ -51,7 +51,7 @@ const Slide=(props)=>{
                         <div className="btn dom"onClick={()=>props.isComponent("projets")}>
 
                             <i className="bi bi-stack"></i>
-                            <span className="item " aria-current="page" >Mes Projets</span>
+                            <span className="item " aria-current="page" >Projets</span>
                         </div>
                     </li>
                     
@@ -59,7 +59,7 @@ const Slide=(props)=>{
                         <div className="btn dom"onClick={()=>props.isComponent("task")}>
 
                             <i className="bi bi-share-fill"></i>
-                            <span className="item " aria-current="page" >Mes Tâches</span>
+                            <span className="item " aria-current="page" >Tâches</span>
                         </div>
                     </li>
                 
