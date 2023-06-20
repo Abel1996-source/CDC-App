@@ -107,7 +107,7 @@ nav i{
   display: flex;
 }
 .navbar-loyout{
-  width: 87%;
+  width: 100%;
   height: 10%;
 }
 .navbar-loyout.active{
@@ -121,6 +121,14 @@ nav i{
 .slide-loyout.active{
   width: 8%;
   height: 100%;
+}
+.layout{
+  width: 100%;
+  height: 100%;
+}
+.children{
+  margin-top: 0rem;
+  height: 625px;
 }
 /*------------------------------------------------------------------------------------
             Slide.jsx
@@ -192,4 +200,10 @@ nav i{
 }
 .form-check{
   cursor: pointer;
+}
+/*------------------------------------------------------------------------------------
+            Overview.jsx
+--------------------------------------------------------------------------*/
+.overview{
+  margin-left: 0.3rem;
 }
