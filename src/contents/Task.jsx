@@ -1,7 +1,16 @@
+import { Link } from "react-router-dom";
+
 const Task=()=>{
     return(
         <>
-            <p>Welcome to Task component !</p>
+             <div className="overview">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><Link to="/dashboad">Dashboad</Link></li>
+                        <li class="breadcrumb-item active" aria-current="page">Tâches</li>
+                    </ol>
+                </nav>
+            </div>
         </>
     )
 }
