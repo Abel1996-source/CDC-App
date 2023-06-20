@@ -8,7 +8,7 @@ const Slide=()=>{
   
     const slides=document.querySelectorAll(".dom");
     let activeSlide=null;
-    slides.forEach((slide)=>{
+        slides.forEach((slide)=>{
         slide.addEventListener('click',()=>{
             if (activeSlide) {
                 activeSlide.classList.remove("active"); // Supprimer la classe active du précédent bouton

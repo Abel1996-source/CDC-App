@@ -12,13 +12,13 @@ const Theme=()=>{
                 </button>
                  <ul class="dropdown-menu helping" aria-labelledby="dropdownMenuLink">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"/>
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" />
                         <label class="form-check-label" for="exampleRadios1">
                             Black
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked/>
                         <label class="form-check-label" for="exampleRadios2">
                             White
                         </label>
