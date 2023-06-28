@@ -213,3 +213,58 @@ nav i{
 .breadcrumb {
   margin: 1rem;
 }
+/*------------------------------------------------------------------------------------
+            Home.jsx
+--------------------------------------------------------------------------*/
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  background-color: #000;
+  color:#FFF;
+  
+}
+.cover-container{
+  width: 100%;
+  height: 100%;
+  
+}
+.pageNav{
+  width: 100%;
+  height: 15%;
+  background-color: #000;
+  color: #FFF;
+}
+.mb-auto div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.mb-auto div nav a{
+  color: #FFF;
+}
+.mb-auto div nav a:hover{
+  color:#FFF;
+  border-bottom: 2px solid rgba(255, 25, 0, 0.9);
+ 
+}
+.main{
+  width: 70%;
+  
+}
+.px-3{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.px-3 h1{
+  margin: 1rem;
+}
+.px-3 p{
+  margin: 1rem;
+}
