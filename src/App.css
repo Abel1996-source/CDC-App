@@ -310,3 +310,30 @@ nav i{
   margin-top: 2rem;
   font-weight: 500;
 }
+
+/*------------------------------------------------------------------------------------
+            Login.jsx
+--------------------------------------------------------------------------*/
+.nav-goals{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/*------------------------------------------------------------------------------------
+            Projets.jsx
+--------------------------------------------------------------------------*/
+.offcanvas-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offcanvas-body {
+  width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.offcanvas-body form{
+  width: 100%;
+ margin: 1rem;
+}

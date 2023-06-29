@@ -9,7 +9,6 @@ const Register=()=>{
                     <span>Register</span>
                 </div>
                 <div className="login-left">
-                    <div id="emailHelp" className="form-text"></div>
                     <form>
                         <div className="mb-3">
                             <label for="exampleInputEmail1" className="form-label">Nom</label>
