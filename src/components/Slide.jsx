@@ -23,7 +23,7 @@ const Slide=(props)=>{
         <>
             <div className="slide">
                <div className="logo">
-                <Link to="#">
+                <Link to="/">
                     <Stack direction="row" spacing={2}>
                         <Avatar sx={{ bgcolor: deepOrange[500] }} variant="rounded">
                             <AssignmentIcon />
