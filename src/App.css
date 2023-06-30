@@ -139,7 +139,7 @@ nav i{
 --------------------------------------------------------------------------*/
 .slide{
   width: 100%;
-  height: 702px;
+  height: 715px;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -337,6 +337,38 @@ nav i{
   width: 100%;
  margin: 1rem;
 }
+.goals{
+  margin-top: 1rem;
+  padding: 1rem;
+  overflow-y:auto;
+  height: 500px;
+  
+}
+.update i{
+  color: rgb(50, 50, 188);
+  font-size: 1.1rem;
+}
+.deleted i{
+  color: rgb(203, 35, 35);
+  font-size: 1.1rem;
+}
+.goals .name{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 0.6rem;
+}
+.param{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.param button{
+  margin: 0.5rem;
+}
 /*------------------------------------------------------------------------------------
             Task.jsx
 --------------------------------------------------------------------------*/
@@ -344,4 +376,16 @@ nav i{
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.task{
+  margin-top: 1rem;
+}
+.body-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.accordion-button{
+  color: #000;
 }

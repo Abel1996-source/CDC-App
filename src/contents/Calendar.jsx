@@ -11,6 +11,7 @@ const Calendar=()=>{
                     <li className="breadcrumb-item active" aria-current="page">Calendar</li>
                 </ol>
             </nav>
+            <hr />
             </div>
         </>
     )

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Dropdown from "./Dropdown";
 import Avatar from "./Avatar";
-import Colaborate from "./Colaborate";
 import Notification from "./Notification";
 import Help from "./Help";
 import Theme from "./Theme";
@@ -29,7 +28,7 @@ const Navbar = () => {
                     />
                 </form>
           </div>
-            <div><Colaborate/></div>
+           
             <div><Notification/></div>
             <div><Help/></div>
             <div>

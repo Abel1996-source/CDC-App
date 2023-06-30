@@ -11,6 +11,7 @@ const Task=()=>{
                         <li class="breadcrumb-item active" aria-current="page">Tâches</li>
                     </ol>
                 </nav>
+                <hr />
                 <div className="content-task">
                     <div className="nav-task">
                       <div className="item-pro">
@@ -36,9 +37,30 @@ const Task=()=>{
                             </div>
                       </div>
                       <div className="item-pro">
-                            <button className="btn btn-success form-control">Setting</button>
+                      <form className="d-flex">
+                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    </form>
                       </div>
                     </div>
+                    <div className="task">
+                        <div className="accordion" id="accordionPanelsStayOpenExample">
+                            <div className="accordion-item">
+                                <h2 className="accordion-header" id="panelsStayOpen-headingOne">
+                                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                    Développement de site E-commerce
+                                </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                <div className="accordion-body">
+                                   <div className="body-header">
+                                        <button className="btn btn-primary">Add Task</button>
+                                        <button className="btn btn-danger">Delete</button>
+                                   </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </>

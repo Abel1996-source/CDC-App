@@ -2,7 +2,7 @@ import { Tooltip } from "@mui/material";
 const Colaborate=()=>{
     return(
         <>
-             <button type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+             <button type="button" className="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
                     <Tooltip title="Colaborateurs" arrow> 
                             <div className="colaborate"><i className="bi bi-people-fill"></i></div>
                     </Tooltip>

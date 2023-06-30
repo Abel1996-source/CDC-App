@@ -10,6 +10,7 @@ const Cdc=()=>{
                         <li class="breadcrumb-item active" aria-current="page">Cahier des charges</li>
                     </ol>
                 </nav>
+                <hr />
             </div>
         </>
     )

@@ -10,6 +10,7 @@ const Customers=()=>{
                         <li class="breadcrumb-item active" aria-current="page">Users</li>
                     </ol>
                 </nav>
+                <hr />
             </div>
         </>
     )
