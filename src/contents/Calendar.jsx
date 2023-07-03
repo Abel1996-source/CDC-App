@@ -11,7 +11,26 @@ const Calendar=()=>{
         { title: 'Événement 3', date: '2023-07-10' },
         { title: 'Événement 4', date: '2023-09-01' }
         ]);
+        const [event,setEvent]=useState(" ");
+        const [date,setDate]=useState(" ");
+        const handleEvent=(value)=>{
+            console.log(value.target.value);
+            setEvent(value.target.value)
+        }
+        const handleDate=(value)=>{
+            console.log(value.target.value);
+            setDate(value.target.value);
+        }
 
+        const handleSubmit=(e)=>{
+            e.preventDefault()
+            setSelectedDate([...selectedDate,{
+                title:event,
+                date:date
+            }])
+            setDate("")
+            setEvent("")
+        }
     return(
         <>
            <div className="overview">
@@ -25,9 +44,9 @@ const Calendar=()=>{
             <div className="content-calendar">
                 <div className="calendar-header">
                     <form className="d-flex">
-                        <input className="form-control me-2" type="text" placeholder="Add a new event " aria-label="text"/>
-                        <input className="form-control me-2" type="date" placeholder="Add event date" aria-label="date"/>
-                        <button className="btn btn-primary" type='submit'>Add</button>
+                        <input className="form-control me-2" type="text" placeholder="Add a new event " aria-label="text" value={event} onChange={handleEvent} />
+                        <input className="form-control me-2" type="date" placeholder="Add event date" aria-label="date" value={date} onChange={handleDate}/>
+                        <button className="btn btn-primary" type='submit' onClick={handleSubmit} >Add</button>
                     </form>
                 </div>
                 <hr />
