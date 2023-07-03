@@ -1,7 +1,16 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import ModalForTask from "../components/nexts/ModalForTask";
 
 
 const Task=()=>{
+    const [status,setStatus]=useState("En Cours")
+    const [isOk,setOk]=useState(false)
+
+    const handleStatus=()=>{
+        setOk(true)
+        setStatus("Terminer")
+    }
     return(
         <>
              <div className="overview">
@@ -53,8 +62,17 @@ const Task=()=>{
                                 <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                                 <div className="accordion-body">
                                    <div className="body-header">
-                                        <button className="btn btn-primary">Add Task</button>
+                                        <ModalForTask/>
                                         <button className="btn btn-danger">Delete</button>
+                                   </div>
+                                   <div className="body">
+                                        <div className="tache">
+                                            <h5>zdofhfpffrrhrfgfvddhdgffjhdvdvdbjvglvjvsldv dfvfvhfvr</h5>
+                                            <div >
+                                                <span className="btn btn-primary status" onClick={handleStatus}>{isOk?status:status}</span>
+                                                <span className=" btn btn-light deleted"><i className="bi bi-trash-fill"></i></span>
+                                            </div>
+                                        </div>
                                    </div>
                                 </div>
                                 </div>

@@ -379,6 +379,8 @@ nav i{
 }
 .task{
   margin-top: 1rem;
+  overflow-y:auto;
+  height: 500px;
 }
 .body-header{
   display: flex;
@@ -388,4 +390,31 @@ nav i{
 }
 .accordion-button{
   color: #000;
+}
+.body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tache{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1rem;
+  padding: 0.3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.tache div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tache div span{
+  margin: 0.5rem;
+}
+.title-task{
+  margin-bottom: 1rem;
 }
