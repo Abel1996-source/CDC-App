@@ -442,3 +442,19 @@ nav i{
   border-radius: 5px;
   margin: 0.5rem;
 }
+
+
+/*------------------------------------------------------------------------------------
+            Calendar.jsx
+--------------------------------------------------------------------------*/
+
+.calendar-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar-body{
+  margin-top: 1rem;
+  overflow-y:auto;
+  height: 500px;
+}
