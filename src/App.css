@@ -330,7 +330,7 @@ nav i{
 .offcanvas-body {
   width: 100%;
  display: flex;
- justify-content: center;
+ justify-content: space-between;
  align-items: center;
 }
 .offcanvas-body form{
@@ -402,10 +402,11 @@ nav i{
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 1rem;
-  padding: 0.3rem;
+  padding: 0.1rem;
   background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 .tache div{
   display: flex;
@@ -417,4 +418,27 @@ nav i{
 }
 .title-task{
   margin-bottom: 1rem;
+}
+
+/*------------------------------------------------------------------------------------
+            Customers.jsx
+--------------------------------------------------------------------------*/
+.users-header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.users-body{
+  margin-top: 1rem;
+  overflow-y:auto;
+  height: 500px;
+}
+.users{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.3rem;
+  border-radius: 5px;
+  margin: 0.5rem;
 }
