@@ -13,7 +13,7 @@ const Customers=()=>{
                 <hr />
                 <div className="content-users">
                     <div className="users-header">
-                        <button className="btn btn-primary">Add</button>
+                        <button className="btn btn-primary">Add User</button>
                         <form className="d-flex">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                         </form>
