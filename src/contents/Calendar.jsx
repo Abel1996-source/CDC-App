@@ -43,6 +43,7 @@ const Calendar=()=>{
             <hr />
             <div className="content-calendar">
                 <div className="calendar-header">
+                    <span>Ajouter des évenements</span>
                     <form className="d-flex">
                         <input className="form-control me-2" type="text" placeholder="Add a new event " aria-label="text" value={event} onChange={handleEvent} />
                         <input className="form-control me-2" type="date" placeholder="Add event date" aria-label="date" value={date} onChange={handleDate}/>

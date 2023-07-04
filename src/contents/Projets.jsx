@@ -30,7 +30,7 @@ const Projets=()=>{
                                 <span className="projetName">Dévelopement web</span>
                             </div>
                            <div className="param">
-                                <button className="btn btn-dark " >Build</button>
+                                <Link className="btn btn-dark " to={`/formulaire/${1}`} >Build</Link>
                                 <button className="btn btn-light update"><i className="bi bi-pencil-fill"></i></button>
                                 <button className="btn btn-light deleted"><i className="bi bi-trash-fill"></i></button>
                                 <span><Colaborate/></span>
