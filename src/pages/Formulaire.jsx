@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const Formulaire=()=>{
             const [step, setStep] = useState(1);
-        const [formData, setFormData] = useState({
+      /*  const [formData, setFormData] = useState({
             // Initialisez ici les valeurs de vos champs de formulaire
         });
-
+*/
         const handleNext = () => {
             setStep(step + 1);
         };
@@ -16,11 +16,11 @@ const Formulaire=()=>{
             setStep(step - 1);
         };
 
-        const handleChange = (e) => {
+      /*  const handleChange = (e) => {
             const { name, value } = e.target;
             setFormData({ ...formData, [name]: value });
         };
-
+*/
         const handleSubmit = (e) => {
             e.preventDefault();
     // Effectuez ici la validation finale du formulaire et soumettez les données si tout est valide
