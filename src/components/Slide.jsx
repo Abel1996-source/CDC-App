@@ -1,8 +1,4 @@
 import {Link} from "react-router-dom";
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
-import { deepOrange } from '@mui/material/colors';
-import AssignmentIcon from '@mui/icons-material/Assignment';
 
 
 const Slide=(props)=>{
@@ -22,13 +18,9 @@ const Slide=(props)=>{
     return(
         <>
             <div className="slide">
-               <div className="logo">
-                <Link to="/">
-                    <Stack direction="row" spacing={2}>
-                        <Avatar sx={{ bgcolor: deepOrange[500] }} variant="rounded">
-                            <AssignmentIcon />
-                        </Avatar>
-                    </Stack>
+               <div>
+                <Link to="/" className="logo-a">
+                   <h3 className="float-md-start mb-0 mt-1 logo">Horas</h3>
                 </Link>
                 </div>
                  <ul className="nav flex-column">

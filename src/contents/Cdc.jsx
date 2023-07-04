@@ -11,6 +11,23 @@ const Cdc=()=>{
                     </ol>
                 </nav>
                 <hr />
+                <div className="content-cdc">
+                    <div className="cdc-header">
+                        
+                        <form className="d-flex">
+                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                        </form>
+                    </div>
+                    <div className="cdc-body">
+                        <div className="body-content">
+                            <div className="projet-name"><span>djhcvdcdjjdd</span></div>
+                            <div className="projet-action">
+                                <button className="btn btn-dark " ><i className="bi bi-box-arrow-up"></i></button>
+                                <button className="btn btn-light deleted"><i className="bi bi-trash-fill"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )

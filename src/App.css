@@ -66,7 +66,6 @@ nav i{
   align-items: center;
   margin: 0.5rem;
   padding: 0.5rem;
-  border-radius: 10px;
   border-bottom: 1px solid #FFF;
   cursor: pointer;
 }
@@ -272,7 +271,19 @@ nav i{
 .px-3 p{
   margin: 1rem;
 }
-
+.logo {
+  font-weight: bolder;
+  background-color: rgb(199, 65, 28);
+  border-radius: 20px 0px 20px 0px ;
+  
+ padding: 0.5rem;
+}
+.logo-a{
+  color: #FFF;
+}
+.logo-a:hover{
+  color: #FFF;
+}
 /*------------------------------------------------------------------------------------
             Login.jsx
 --------------------------------------------------------------------------*/
@@ -356,10 +367,10 @@ nav i{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  padding: 1rem;
-  margin: 0.6rem;
+  padding: 0.2rem;
+  margin: 0.4rem;
 }
 .param{
   display: flex;
@@ -452,9 +463,34 @@ nav i{
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .calendar-body{
   margin-top: 1rem;
   overflow-y:auto;
   height: 500px;
+}
+/*------------------------------------------------------------------------------------
+            Cdc.jsx
+--------------------------------------------------------------------------*/
+.cdc-header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.body-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+.cdc-body{
+  margin-top: 1rem;
+  overflow-y:auto;
+  height: 500px;
+}
+.projet-action button{
+  margin: 0.4rem;
 }
