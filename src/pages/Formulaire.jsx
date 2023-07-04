@@ -1,6 +1,6 @@
 import { Tooltip } from "@mui/material";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 
 const Formulaire=()=>{
             const [step, setStep] = useState(1);
@@ -30,9 +30,9 @@ const Formulaire=()=>{
         <>
             <div className="formulaire">
                 <div className="form-header">
-                    <Link to="/" className="logo-a">
-                    <h3 className="float-md-start mb-0 mt-1 logo">Horas</h3>
-                    </Link>
+                   <span>
+                        Etape {step}
+                   </span>
                 </div>
                 <div className="fromulaire-body">
                     <form className="row g-3" onSubmit={handleSubmit}>

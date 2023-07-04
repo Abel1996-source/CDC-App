@@ -5,8 +5,8 @@ const Register=()=>{
     return(
         <>
          < div className="content-login">
-                <div className="logo">
-                    <span>Register</span>
+                <div className="log">
+                    <h3 className="float-md-start mb-0 mt-1 logo">Horas</h3>
                 </div>
                 <div className="login-left">
                     <form>
