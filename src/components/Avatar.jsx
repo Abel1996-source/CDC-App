@@ -1,13 +1,19 @@
 import { Tooltip } from "@mui/material";
 import { Link } from "react-router-dom";
+import { DecodeToken } from "../DecodeToken";
+import { logout } from "../Logout";
 
 const Avatar=()=> {
+    const handleLogout=()=>{
+        logout()
+        
+    }
     return(
         <>
         <div className="dropdown dropstart">
             <div className=" btn dropdown-toggle avatar" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                  <Tooltip title="compte" arrow>
-                     <img src="./logo192.png" alt="avatar" />        
+                    <span className="userImage"><i className="bi bi-person"></i> </span>     
                  </Tooltip>
             </div>
             <ul className="dropdown-menu  dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
@@ -15,10 +21,12 @@ const Avatar=()=> {
                 <hr className="dropdown-divider"/>
                      <span>
                      <div className="avatar-1">
-                        <img src="./logo192.png" alt="" title="compte"/>
+                        <Tooltip title="compte" arrow>
+                            <span className="userImage"><i className="bi bi-person"></i> </span>     
+                        </Tooltip>
                         <span>
-                            <h5>Konan kouakou abel</h5>
-                            <h5>k.kouakouabel96@gmail.com</h5>  
+                            <h5>{DecodeToken().name} </h5>
+                            <h5>{DecodeToken().email} </h5>  
                         </span>
                     </div>
                 </span>
@@ -27,7 +35,7 @@ const Avatar=()=> {
                 <hr className="dropdown-divider"/>
                 <li><Link to="#">Paramètres</Link></li>
                 <hr className="dropdown-divider"/>
-                <li>  <Link to="#">Déconnexion</Link></li>
+                <li>  <button className="btn btn-warning " onClick={handleLogout} >Déconnexion</button></li>
             </ul>
             </div>
             

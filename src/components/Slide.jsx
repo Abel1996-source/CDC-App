@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import { DecodeToken } from "../DecodeToken";
 
 
 const Slide=(props)=>{
@@ -30,14 +31,18 @@ const Slide=(props)=>{
                             <span className=" item " aria-current="page" > OverView</span>
                         </div>
                     </li>
-                    
-                    <li className=" btn nav-item">
-                        <div className="btn dom"onClick={()=>props.isComponent("customers")}>
-
-                            <i className="bi bi-people-fill"></i>
-                            <span className="item " aria-current="page" >Customers</span>
-                        </div>
-                    </li>
+                    {
+                        DecodeToken().profile==="admin"&&(
+                            <li className=" btn nav-item">
+                            <div className="btn dom"onClick={()=>props.isComponent("customers")}>
+    
+                                <i className="bi bi-people-fill"></i>
+                                <span className="item " aria-current="page" >Customers</span>
+                            </div>
+                        </li>
+                        )
+                    }
+                   
                     
                     <li className="btn nav-item">
                         <div className="btn dom"onClick={()=>props.isComponent("projets")}>

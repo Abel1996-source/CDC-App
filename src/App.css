@@ -41,14 +41,17 @@ nav i{
   object-fit: cover;
   
 }
-.avatar-1 img{
-  height: 30px;
-  width: 30px;
+.userImage{
+  background-color: #FFF;
+  padding: 0.6rem;
   border-radius: 50%;
-  border: 2px solid #FFF;
-  object-fit: cover;
-  margin: 0.5rem;
+  
 }
+.userImage i{
+  color: #000;
+  font-size: 1.2rem;
+}
+
 .avatar-1 span h5{
   font-size: 12px;
 }
@@ -320,12 +323,29 @@ nav i{
 }
 
 /*------------------------------------------------------------------------------------
-            Login.jsx
+            Register.jsx
 --------------------------------------------------------------------------*/
 .nav-goals{
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.validation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 100px 200px 100px 200px ;
+}
+.header h2{
+  color: blue;
+  font-weight: bold;
+}
+.body p{
+  color: #000;
+  font-size: 18px;
+  
 }
 /*------------------------------------------------------------------------------------
             Projets.jsx
