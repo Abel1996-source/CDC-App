@@ -1,8 +1,8 @@
-const Blog=()=>{
+const Forum=()=>{
     return(
         <>
             
         </>
     )
 }
-export default Blog;
+export default Forum;

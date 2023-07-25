@@ -1,9 +1,9 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { signin } from "../axios/users/users";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as yup from 'yup'
 import {useState } from "react";
-import {isAuthenticated} from '../TokenValidation'
+
 
     const Login=()=>{
 
@@ -43,13 +43,8 @@ import {isAuthenticated} from '../TokenValidation'
     return(
         <>
             <div className="content-login">
-                    {
-                       
-                        isAuthenticated()&& <Navigate to="/dashboad" />
-                        
-                    }
                 <div className="log">
-                    <h3 className="float-md-start mb-0 mt-1 logo">Horas</h3>
+                    <h3 className="float-md-start mb-0 mt-1 logo">Asyé</h3>
                 </div>
                 <div className="login-left">
                 <div id="emailHelp" className="form-text"></div>

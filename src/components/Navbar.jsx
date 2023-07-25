@@ -12,32 +12,17 @@ const Navbar = () => {
   
   return (
     <>
-      <nav className="navbar navbar-dark bg-dark">
-        <div className="container ">
-          <div className="list">
-            <i className="bi bi-list-nested"></i>
-          </div>
+      <nav className="navbar navbar-dark bg-dark navigation">
+        <div className="container-fluid">
          <div className="recent"><Dropdown projetRecent={projetRecent} setProjetRecent={setProjetRecent} /></div>
-          <div className="form-search">
-                <form className="form">
-                    <input
-                    className="form-control "
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                    />
-                </form>
-          </div>
-           
             <div><Notification/></div>
             <div><Help/></div>
             <div>
                 <Theme/>
             </div>
-          
-            {
-              <Avatar />
-            }
+            <div>
+                <Avatar />
+            </div>
         </div>
       </nav>
     </>

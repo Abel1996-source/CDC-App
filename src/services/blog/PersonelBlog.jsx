@@ -1,8 +1,8 @@
-const Blog=()=>{
+const PersonelBlog=()=>{
     return(
         <>
             
         </>
     )
 }
-export default Blog;
+export default PersonelBlog;

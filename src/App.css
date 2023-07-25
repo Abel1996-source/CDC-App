@@ -7,49 +7,24 @@ body{
   box-sizing: border-box;
   background-color: #fff;
   width: 100%;
+  
 }
 
 /*------------------------------------------------------------------------------------
             Navbar.jsx
 --------------------------------------------------------------------------*/
-.navbar{
+.navigation{
  background-color: black;
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+ height: 100%;
 }
-.avatar{
-  cursor: pointer;
-}
+
 nav i{
   color: #fff;
   cursor: pointer;
-  font-size: 1.2rem;
-}
-.form-search{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.avatar img{
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  border: 2px solid #FFF;
-  object-fit: cover;
-}
-.avatar{
-  height: 60px;
-  width: 70px;
-  object-fit: cover;
-  
-}
-.userImage{
-  background-color: #FFF;
-  padding: 0.6rem;
-  border-radius: 50%;
-  
-}
-.userImage i{
-  color: #000;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .avatar-1 span h5{
@@ -141,8 +116,8 @@ nav i{
 --------------------------------------------------------------------------*/
 .slide{
   width: 100%;
-  height: 715px;
-  background-color: black;
+  height: 800px;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -151,6 +126,9 @@ nav i{
 .logo{
   padding: 1.5rem;
   cursor: pointer;
+}
+.logo-a{
+  margin-top: 1.2rem;
 }
 .flex-column li{
   padding: 0.2rem;
@@ -297,7 +275,7 @@ nav i{
   align-items: center;
   width: 100%;
   height: 703px;
-  background-color: #eae0e0;
+  background-color: #fff;
 
 }
 .login-left{
@@ -525,29 +503,31 @@ nav i{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("https://img.freepik.com/photos-premium/illustration-3d-cocotier-ile-ciel-bleu-mer-bleue-full-hd_406607-6369.jpg");
   
-}
-.form-header{
-  margin: 2rem;
-  background-color: orange;
-  padding: 1.5rem;
-  border-radius: 20px;
+ height: 705px;
 }
 .form-header span{
-  color: #FFF;
   font-size: 1.1rem;
 }
 .fromulaire-body{
-  width: 100%;
+  width: 90%;
+  height: 70%;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.form-header{
+  margin-bottom: 1rem;
 }
 .fromulaire-body form{
-  width: 60%;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  width: 100%;
+  padding: 0px 200px 0px 200px ;
+  height: 100%;
 }
 .step-1{
   width: 100%;
@@ -558,13 +538,13 @@ nav i{
   
 }
 .step-1 div{
-  margin-bottom: 1rem;
-  width: 50%;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
 .step-1 div label{
-  margin: 1rem;
-  color: rgba(0, 25, 245, 0.7);
+  margin: 0.5rem;
   padding: 0.5rem;
+  font-size: 0.8rem;
 }
 .button {
   display: flex;

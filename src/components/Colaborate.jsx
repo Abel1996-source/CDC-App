@@ -3,7 +3,7 @@ const Colaborate=()=>{
     return(
         <>
              <button type="button" className="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
-                    <Tooltip title="Colaborateurs" arrow> 
+                    <Tooltip title="Colaborators" arrow> 
                             <div className="colaborate"><i className="bi bi-people-fill"></i></div>
                     </Tooltip>
             </button>

@@ -2,6 +2,7 @@ import {Link} from "react-router-dom";
 import { DecodeToken } from "../DecodeToken";
 
 
+
 const Slide=(props)=>{
  
     const slides=document.querySelectorAll(".dom");
@@ -19,18 +20,12 @@ const Slide=(props)=>{
     return(
         <>
             <div className="slide">
-               <div>
-                <Link to="/" className="logo-a">
-                   <h3 className="float-md-start mb-0 mt-1 logo">Horas</h3>
-                </Link>
+               <div className="logo-a">
+                    <Link to="/">
+                    <h3 className="float-md-start mb-0 mt-1 logo">Asyé</h3>
+                    </Link>
                 </div>
                  <ul className="nav flex-column">
-                    <li className=" btn nav-item">
-                        <div className="btn dom" onClick={()=>props.isComponent("overview")}>
-                            <i className="bi bi-bar-chart-fill"></i>
-                            <span className=" item " aria-current="page" > OverView</span>
-                        </div>
-                    </li>
                     {
                         DecodeToken().profile==="admin"&&(
                             <li className=" btn nav-item">
@@ -63,7 +58,7 @@ const Slide=(props)=>{
                     <li className="btn nav-item ">
                         <div className="btn dom" onClick={()=>props.isComponent("cdc")}>
                             <i className="bi bi-filetype-pdf"></i>
-                            <span className="item " aria-current="page" >Papier cdc</span>
+                            <span className="item " aria-current="page" >Report</span>
                         </div>
                     </li>
                    
@@ -72,6 +67,24 @@ const Slide=(props)=>{
 
                             <i className="bi bi-calendar2-event"></i>
                             <span className="item " aria-current="page" >Calendar</span>
+                        </div>
+                    </li>
+                    <li className="btn nav-item">
+                        <div className="btn dom">
+                            <i className="bi bi-list-nested"></i>
+                            <span className="item " aria-current="page" >Planing</span>
+                        </div>
+                    </li>
+                    <li className="btn nav-item">
+                        <div className="btn dom">
+                            <i className="bi bi-graph-up-arrow"></i>
+                            <span className="item " aria-current="page" >Suivis</span>
+                        </div>
+                    </li>
+                    <li className="btn nav-item">
+                        <div className="btn dom" onClick={()=>props.isComponent("overview")}>
+                            <i className="bi bi-bar-chart-line-fill"></i>
+                            <span className="item " aria-current="page" >Statistique</span>
                         </div>
                     </li>
                     

@@ -62,20 +62,21 @@ const Customers=()=>{
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={handleSearch} />
                         </form>
                     </div>
-
-                    <table class="table">
-                        <thead>
-                            <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">statut</th>
-                            <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {users.length===0?spiner :utilisateurs}
-                        </tbody>
-                    </table>
+                    <div className="users-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">statut</th>
+                                <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {users.length===0?spiner :utilisateurs}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </>

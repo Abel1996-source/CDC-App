@@ -1,11 +1,17 @@
-import { Alert, Tooltip } from "@mui/material";
+import { Alert, Badge, Tooltip } from "@mui/material";
+import MailIcon from '@mui/icons-material/Mail';
+import { useState } from "react";
+
 
 const Notification=()=>{
+    const [messageCount,setMessageCount]=useState(1);
     return(
         <>
                 <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <Tooltip title="Notifications" arrow>
-                     <div className="notify"><i className="bi bi-bell-fill " ></i></div>
+                    <Badge badgeContent={messageCount} color="primary">
+                        <MailIcon />
+                    </Badge>
                 </Tooltip>
                 </button>
                 <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

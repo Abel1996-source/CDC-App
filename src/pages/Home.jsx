@@ -11,7 +11,7 @@ const Home=()=>{
             </div>
             <div className="main">
                 <div className="px-3">
-                    <h1>Cover your page.</h1>
+                    <h1>Asyé</h1>
                     <p className="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
                     <p className="lead">
                         <Link to="/dashboad" className="btn btn-lg btn-secondary fw-bold border-white bg-dark">Learn more</Link>

@@ -1,39 +1,74 @@
 import {Link} from 'react-router-dom'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
-
+import { createevent, getevent } from '../axios/events/eventRequest';
+import Alert from '../components/nexts/Alert';
+import { DecodeToken } from "../DecodeToken";
+import ModaleCalendar from '../components/nexts/ModaleCalendar';
+import { Button } from '@mui/material';
 
 const Calendar=()=>{
-    const [selectedDate, setSelectedDate] = useState([
-        { title: 'Événement 1', date: '2023-07-01' },
-        { title: 'Événement 2', date: '2023-07-05' },
-        { title: 'Événement 3', date: '2023-07-10' },
-        { title: 'Événement 4', date: '2023-09-01' }
-        ]);
-        const [event,setEvent]=useState(" ");
-        const [date,setDate]=useState(" ");
-        const handleEvent=(value)=>{
-            console.log(value.target.value);
-            setEvent(value.target.value)
-        }
-        const handleDate=(value)=>{
-            console.log(value.target.value);
-            setDate(value.target.value);
-        }
+    const [selectedDate, setSelectedDate] = useState({
+        name:"",
+        date:""
+    });
+    const [showToast, setShowToast] = useState(false);
+    const [info,setInfo]=useState('')
+    const [event,setEvent]=useState([]);
+    const [open, setOpen] = useState(false);
+    const [eventid,setEventid]=useState({})
 
-        const handleSubmit=(e)=>{
-            e.preventDefault()
-            setSelectedDate([...selectedDate,{
-                title:event,
-                date:date
-            }])
-            setDate("")
-            setEvent("")
-        }
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        
+        createevent(DecodeToken().userId,selectedDate).then((res)=>{
+             
+            setSelectedDate({
+                name:"",
+                date:""
+            })
+            chargementdesevenements();//chargement des évenements
+            setShowToast(true)
+            setInfo(res.data.message)   
+        }).catch((err)=>{
+            //console.log(err);
+            setShowToast(true)
+            setInfo(err.response.data.message)
+         })
+    }
+
+    const handleChange=(event)=>{
+        setSelectedDate({...selectedDate,[event.target.name]:event.target.value})
+    }
+    const chargementdesevenements=()=>{
+        getevent(DecodeToken().userId).then((res)=>{
+            setEvent(res.data.donnees)
+            
+        }).catch((err)=>{
+            console.log(err.response.data.message);
+        })
+    }
+
+    const handlemodale=(event)=>{
+        setOpen(true)
+        setEventid(event)
+    }
+    useEffect(()=>{
+        chargementdesevenements();//chargement des évenements
+    },[])
+
+   
+   const selecteEvent=event.map(item => ({id:item.id,title: item.name, date: item.date }));
     return(
         <>
            <div className="overview">
+            {
+                <Alert showToast={showToast} setShowToast={setShowToast} > {info} </Alert>
+            }
+            {
+                <ModaleCalendar  chargementdesevenements={ chargementdesevenements} setInfo={setInfo} setShowToast={setShowToast} setOpen={setOpen} open={open} eventid={eventid} />
+            }
            <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/dashboad">Dashboad</Link></li>
@@ -44,10 +79,10 @@ const Calendar=()=>{
             <div className="content-calendar">
                 <div className="calendar-header">
                     <span>Ajouter des évenements</span>
-                    <form className="d-flex">
-                        <input className="form-control me-2" type="text" placeholder="Add a new event " aria-label="text" value={event} onChange={handleEvent} />
-                        <input className="form-control me-2" type="date" placeholder="Add event date" aria-label="date" value={date} onChange={handleDate}/>
-                        <button className="btn btn-primary" type='submit' onClick={handleSubmit} >Add</button>
+                    <form className="d-flex" onSubmit={handleSubmit}>
+                        <input className="form-control me-2" type="text" name='name' required placeholder="Add a new event " aria-label="text" value={selectedDate.name}  onChange={handleChange} />
+                        <input className="form-control me-2" type="date" name='date' required placeholder="Add event date" aria-label="date" value={selectedDate.date}  onChange={handleChange}/>
+                        <button className="btn btn-primary" type='submit'>Add</button>
                     </form>
                 </div>
                 <hr />
@@ -55,7 +90,15 @@ const Calendar=()=>{
                     <FullCalendar
                         plugins={[dayGridPlugin]}
                         initialView="dayGridMonth"
-                        events={selectedDate}
+                        events={selecteEvent}
+                        eventDisplay="block"
+                        eventContent={(eventInfo) => (
+                          <div className="event-content">
+                            <Button variant="contained-fluid" onClick={() => handlemodale(eventInfo.event)}>
+                                {eventInfo.event.title}
+                            </Button>
+                          </div>
+                        )}
                     />
                 </div>
             </div>

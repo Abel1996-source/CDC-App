@@ -67,7 +67,7 @@ const Register=()=>{
             </div>):""
                 }
                 <div className="log">
-                    <h3 className="float-md-start mb-0 mt-1 logo">Horas</h3>
+                    <h3 className="float-md-start mb-0 mt-1 logo">Asyé</h3>
                 </div>
                 <div className="login-left">
                     <form onSubmit={handleSubmit}>
