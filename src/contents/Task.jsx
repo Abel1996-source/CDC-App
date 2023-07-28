@@ -15,18 +15,20 @@ const Task=()=>{
     let [iD,setID]=useState(null)
     const [showToast, setShowToast] = useState(false);
     const [info,setInfo]=useState('')
-    let count=0;
+   
     let count1=0;
    // let numero_task=0;
 
     const btn_close=document.querySelector(".fermer");
     const initialValues = {
         title:"",
-        description:""
+        start:"",
+        end:""
       };
       const validationSchema = Yup.object({
         title: Yup.string().required('Le titre est requis'),
-        description: Yup.string().required('La description est requise')
+        start:Yup.string(),
+        end:Yup.string()
       });
       const handleSubmit = (values) => {
         createtask(values,iD).then((res)=>{
@@ -134,32 +136,7 @@ const Task=()=>{
                 <hr />
                 
                 <div className="content-task">
-                    <div className="nav-task">
-                      <div className="item-pro">
-                            <button className="btn btn-primary form-control" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Build Projet</button>
-                            <div className="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-                                <div className="offcanvas-header">
-                                    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                </div>
-                                <div className="offcanvas-body">
-                                <select class="form-select" multiple aria-label="multiple select example">
-                                    {
-                                        
-                                        projets.map((projet)=> (
-                                         <option className="pb-1 m-1" value={projet.id} >N°{count=count+1}. {projet.title} </option>
-                                           
-                                        ))
-                                    }
-                                </select>
-                                </div>
-                            </div>
-                      </div>
-                      <div className="item-pro">
-                      <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                      </form>
-                      </div>
-                    </div>
+                    
                     <ModalForTask initialValues={initialValues} validationSchema={validationSchema} handleSubmit={handleSubmit}  />
                     <div className="task">
                         <div className="accordion" >

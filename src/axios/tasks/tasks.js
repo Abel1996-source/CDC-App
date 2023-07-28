@@ -9,6 +9,9 @@ export const createtask= async(data,id)=>{
 export const chargementdestasks= async()=>{
     return await axios.get(baseUrl(`tasks`),headers)
 }
+export const chargementdestasksparprojetid= async(id)=>{
+    return await axios.get(baseUrl(`${id}/tasks`),headers)
+}
 export const updatetasks= async(data,projetid,id)=>{
     return await axios.put(baseUrl(`${projetid}/tasks/${id}`),data,headers)
 }

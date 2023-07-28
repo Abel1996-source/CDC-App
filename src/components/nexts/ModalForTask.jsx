@@ -22,12 +22,16 @@ const ModalForTask=(props)=>{
                         <Field type="text" id="title" name="title" placeholder="Title of Task" className="form-control"/>
                         <ErrorMessage name="title" component="div" style={{color:"red"}} />
                     </div>
-
-                    <div className="description-task">
-                        <Field as="textarea" id="description" name="description" placeholder="Description " className="form-control" />
-                        <ErrorMessage name="description" component="div" style={{color:"red"}} />
-                    </div>
-
+                    <div className='d-flex  mt-3'>
+                        <div style={{marginRight:"1rem"}}>
+                            <label for="start" className="form-label badge bg-primary">Start date</label>
+                            <Field type="date" className="form-control "   name="start"  /> 
+                        </div>
+                        <div>
+                            <label for="start" className="form-label badge bg-primary ">End date</label>
+                            <Field type="date" className="form-control"   name="end"/> 
+                        </div>
+                     </div>
                     <button type="submit" className="btn btn-danger mt-2 form-control" >Add Task</button>
                     </Form>
                 </Formik>

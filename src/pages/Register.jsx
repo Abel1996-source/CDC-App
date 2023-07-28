@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { register } from "../axios/users/users";
 
 
+
 const Register=()=>{
     let [registerData,setRegisterData]=useState({
         name:" ",
@@ -20,9 +21,9 @@ const Register=()=>{
         e.preventDefault()
         console.log(registerData);
         register({
-            name:registerData.name+" "+registerData.prenom,
-            email:registerData.email,
-            password:registerData.password
+            name:registerData.name.trim()+" "+registerData.prenom.trim(),
+            email:registerData.email.trim(),
+            password:registerData.password.trim()
         }).then((response=>{
             setRegiste(true)
             setError('')

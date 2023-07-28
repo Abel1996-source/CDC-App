@@ -551,3 +551,23 @@ nav i{
   justify-content: space-between;
   align-items: center;
 }
+/*------------------------------------------------------------------------------------
+            Planing.jsx
+--------------------------------------------------------------------------*/
+.nav-planing{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.input{
+  margin-right:1rem;
+}
+.bouton{
+  margin: 1rem;
+}

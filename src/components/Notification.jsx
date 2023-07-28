@@ -1,15 +1,27 @@
 import { Alert, Badge, Tooltip } from "@mui/material";
 import MailIcon from '@mui/icons-material/Mail';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getnotifies } from "../axios/notify/notifiesRequest";
+import { DecodeToken } from "../DecodeToken";
 
 
 const Notification=()=>{
-    const [messageCount,setMessageCount]=useState(1);
+    const [messageCount,setMessageCount]=useState([]);
+    const chargementdesnotifications=()=>{
+        getnotifies(DecodeToken().userId).then((res)=>{
+            setMessageCount(res.data.donnees)
+        }).catch((err)=>{
+            console.log(err.response.data.message);
+        })
+    }
+    useEffect(()=>{
+        chargementdesnotifications();//chargement des notifications
+    },[])
     return(
         <>
                 <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 <Tooltip title="Notifications" arrow>
-                    <Badge badgeContent={messageCount} color="primary">
+                    <Badge badgeContent={messageCount.length} color="primary">
                         <MailIcon />
                     </Badge>
                 </Tooltip>
@@ -22,12 +34,15 @@ const Notification=()=>{
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
-                        <div className="Notifi">
-                            <Alert>Welcomme to Dorca your work app</Alert>
-                        </div>
-                        <div className="Notifi">
-                            <Alert>Welcomme to Dorca your work app</Alert>
-                        </div>
+                        {
+                            messageCount.map((notify)=>(
+                                <div className="Notifi">
+                                    <Alert> {notify.message} </Alert>
+                                </div>
+                            ))
+                        }
+                       
+                        
                     </div>
                     </div>
                 </div>

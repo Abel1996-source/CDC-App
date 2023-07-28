@@ -72,7 +72,7 @@ const Slide=(props)=>{
                     <li className="btn nav-item">
                         <div className="btn dom">
                             <i className="bi bi-list-nested"></i>
-                            <span className="item " aria-current="page" >Planing</span>
+                            <span className="item " aria-current="page" onClick={()=>props.isComponent("planing")} >Planing</span>
                         </div>
                     </li>
                     <li className="btn nav-item">

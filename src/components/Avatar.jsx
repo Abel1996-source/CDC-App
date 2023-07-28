@@ -33,16 +33,17 @@ const Avatar=()=> {
           sx: {
             bgcolor: stringToColor(name),
           },
-          children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
+          children: `${name.trim().split(' ')[0][0]}${name.split(' ')[1][0]}`
         };
+        
       }
-
+      
     return(
         <>
         <div className="dropdown dropstart">
             <div className=" btn dropdown-toggle " type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                         <Tooltip title="compte" arrow>
-                          <Ava title="compte" {...stringAvatar(DecodeToken().name)} />     
+                          <Ava  {...stringAvatar(DecodeToken().name)} />     
                         </Tooltip>
             </div>
             <ul className="dropdown-menu  dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
@@ -51,7 +52,7 @@ const Avatar=()=> {
                         <span>
                         <div className="avatar-1 m-1">
                             <Tooltip title="compte" arrow>
-                                <Ava title="compte" {...stringAvatar(DecodeToken().name)} />     
+                                <Ava  {...stringAvatar(DecodeToken().name)} />     
                             </Tooltip>
                             <span>
                                 <h5>{DecodeToken().name} </h5>

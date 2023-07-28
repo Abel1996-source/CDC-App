@@ -87,7 +87,9 @@ const Calendar=()=>{
                 </div>
                 <hr />
                 <div className="calendar-body">
-                    <FullCalendar
+                    {
+                        
+                        <FullCalendar
                         plugins={[dayGridPlugin]}
                         initialView="dayGridMonth"
                         events={selecteEvent}
@@ -100,6 +102,8 @@ const Calendar=()=>{
                           </div>
                         )}
                     />
+                    
+                    }
                 </div>
             </div>
             </div>

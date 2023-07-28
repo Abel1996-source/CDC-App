@@ -8,6 +8,7 @@ import Cdc from "../contents/Cdc";
 import Calendar from "../contents/Calendar";
 import { DecodeToken } from "../DecodeToken";
 import { Navigate } from "react-router";
+import Planing from "../contents/Planing";
 const Dashboad=()=>{
     const [component,isComponent]=useState("overview")
     return(
@@ -17,7 +18,7 @@ const Dashboad=()=>{
                     Date.now() > (DecodeToken().exp)*1000 && <Navigate to="/login"/>
                    }
                 {
-                    component==="overview"?<Overview/>:component==="customers"?<Customers/>:component==="projets"?<Projets/>:component==="task"?<Task/>:component==="cdc"?<Cdc/>:component==="calendar"&&<Calendar/>
+                    component==="overview"?<Overview/>:component==="customers"?<Customers/>:component==="projets"?<Projets/>:component==="task"?<Task/>:component==="cdc"?<Cdc/>:component==="calendar"?<Calendar/>:component==="planing"&&<Planing/>
                 }
             </Loyout>
         </>
