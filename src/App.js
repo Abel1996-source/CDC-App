@@ -27,8 +27,8 @@ const App=() =>{
         <Route path="/validation" element={<ValidationRgister/>}></Route>
         <Route path='/' element={<Home/>}></Route>
         
-        <Route path='/dashboad' element={<ProtectedRoute/>} >
           <Route path='/dashboad' element={<Dashboad/>} ></Route>
+        <Route path='/dashboad' element={<ProtectedRoute/>} >
         </Route>
         <Route path='/blog' element={<ProtectedRoute/>}>
           <Route path='/blog' element={<Blog/>}></Route> 
