@@ -16,8 +16,8 @@ const Navbar = () => {
         <div className="container-fluid">
          <div className="recent"><Dropdown projetRecent={projetRecent} setProjetRecent={setProjetRecent} /></div>
             <div><Notification/></div>
-            <div><Help/></div>
-            <div>
+            <div className="help_main"><Help/></div>
+            <div className="theme_main">
                 <Theme/>
             </div>
             <div>

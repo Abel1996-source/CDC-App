@@ -206,7 +206,7 @@ nav i{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 700px;
+  height: 800px;
   background-color: #000;
   color:#FFF;
   
@@ -264,6 +264,12 @@ nav i{
 }
 .logo-a:hover{
   color: #FFF;
+}
+.lead{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /*------------------------------------------------------------------------------------
             Login.jsx
@@ -571,3 +577,170 @@ nav i{
 .bouton{
   margin: 1rem;
 }
+/*------------------------------------------------------------------------------------------
+                  Responssive 
+-----------------------------------------------------------------------------------------*/
+@media  (max-width: 480px) { 
+
+/*------------------------------------------------------------------------------------
+            Navbar.jsx
+--------------------------------------------------------------------------*/
+.navigation{
+  background-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+ }
+ 
+ nav i{
+   color: #fff;
+   cursor: pointer;
+   font-size: 1.4rem;
+ }
+ 
+ .avatar-1 span h5{
+   font-size: 12px;
+ }
+ .avatar-1 span{
+   margin: 0.5rem;
+ }
+ .avatar-1{
+   display: flex;
+   
+ }
+ .recent-{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 0.5rem;
+   padding: 0.5rem;
+   border-bottom: 1px solid #FFF;
+   cursor: pointer;
+ }
+ .recent{
+  display: none;
+ }
+ 
+ .theme_main{
+  display: none;
+ }
+ .dropstart ul li {
+   text-align: center;
+   cursor: pointer;
+   margin: 1rem;
+   padding: 0.2rem;
+ }
+ .dropstart ul li:hover{
+   text-align: center;
+   margin: 1rem;
+   padding: 0.2rem;
+   background-color: rgba(0, 0, 0, 0.8);
+   border-radius: 5px;
+ }
+ .dropstart ul li a{
+   text-decoration: none;
+   color: #fff;
+   
+ }
+
+ /*------------------------------------------------------------------------------------
+            Slide.jsx
+--------------------------------------------------------------------------*/
+.slide{
+  width: 100%;
+  height: 1000px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.logo-a{
+  margin-top: 1rem;
+}
+.flex-column li{
+  padding: 0.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-column li div i{
+  font-size: 1.1rem;
+  color: #fff;
+}
+.flex-column{
+  height: 100%;
+}
+.flex-column li div{
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  font-size: 15px;
+}
+.flex-column li div i{
+  margin-right:0.5rem ;
+}
+.flex-column li div:hover{
+  color: #fff;
+  background-color: rgba(250, 243, 243, 0.2);
+}
+
+.flex-column li div{
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+}
+.flex-column li div.active{
+    background-color: rgba(245, 16, 16, 0.8);
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+}
+
+.flex-column li div span{
+  display: none;
+}
+/*------------------------------------------------------------------------------------
+            loyout.jsx
+--------------------------------------------------------------------------*/
+.loyout{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.navbar-loyout{
+  width: 100%;
+  height: 10%;
+}
+.navbar-loyout.active{
+  width: 80%;
+  height: 10%;
+}
+.slide-loyout{
+  width: 20%;
+  height: 100%;
+}
+.slide-loyout.active{
+  width: 8%;
+  height: 100%;
+}
+.layout{
+  width: 100%;
+  height: 100%;
+}
+.children{
+  margin-top: 0rem;
+  height: 625px;
+}
+}
+/*
+@media (min-width: 768px) and (max-width: 50em) { 
+
+
+}
+*/
