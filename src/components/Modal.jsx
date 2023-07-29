@@ -5,7 +5,7 @@ const Modal=(props)=>{
     
     return(
         <>
-            <button className="btn btn-primary form-control new-projet" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">New Projet</button>
+            <button className="btn btn-primary form-control new-projet " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">New Projet</button>
             <div className="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
                 <div className="offcanvas-header">
                     <button type="button" className="btn-close text-reset titre" data-bs-dismiss="offcanvas" aria-label="Close"></button>

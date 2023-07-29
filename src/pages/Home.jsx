@@ -28,8 +28,8 @@ const Home=()=>{
                             vous assister et répondre à toutes vos questions.
                          </p>
                          <p>
-                            Nous vous souhaitons une <span className="badge bg-primary">expérience enrichissante et fructueuse</span> avec notre application. 
-                            Ensemble, nous allons accomplir de grandes choses !
+                            Nous vous souhaitons une <span className="badge bg-primary">expérience enrichissante et fructueuse</span> avec notre application. <br />
+                            Ensemble, nous allons <span className="badge bg-success">accomplir de grandes choses !</span>
                          </p>
                         <Link to="/dashboad" className="btn btn-lg btn-secondary fw-bold border-white bg-dark">Learn more</Link>
                     </p>

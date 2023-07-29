@@ -7,6 +7,7 @@ import { actiondeleteprojet, createprojet, getprojets, miseajourdeprojet } from 
 import { Tooltip } from "@mui/material";
 import Alert from "../components/nexts/Alert";
 
+
 const Projets=()=>{
    const btnClose =document.querySelector('.titre')
    const update=document.querySelector('.new-projet');
@@ -27,6 +28,7 @@ const Projets=()=>{
             createprojet(formData_Projet,DecodeToken().userId).then((res)=>{
                 obtentiondesprojets();//Rechargement des projets
                 //console.log(res.data.message);
+
                 setFormData_Projet({ title:""})
                 setShowToast(true)
                 setInfo(res.data.message);
@@ -96,11 +98,11 @@ const miseAjourDeProjet=(projet)=>{
 }
 let touslesprojets=projets.map((projet)=>(
                             <tr>
-                                <td> {count=count+1} </td>
-                                <td >{projet.title}</td>
+                                <td className="projetName"> {count=count+1} </td>
+                                <td className="projetName" >{projet.title}</td>
                                 <td>
                                     <Tooltip title="Bluid project" arrow>
-                                        <Link className="btn btn-dark " to={`/formulaire/${projet.id}`} >Build</Link>
+                                        <Link className="btn btn-dark projetName" to={`/formulaire/${projet.id}`} >Build</Link>
                                     </Tooltip>
                                     <Tooltip title="Update project" arrow>
                                         <button className="btn btn-light update" onClick={()=>miseAjourDeProjet(projet)}><i className="bi bi-pencil-fill"></i></button>
