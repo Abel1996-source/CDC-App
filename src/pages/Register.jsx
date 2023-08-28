@@ -19,7 +19,7 @@ const Register=()=>{
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        console.log(registerData);
+       // console.log(registerData);
         register({
             name:registerData.name.trim()+" "+registerData.prenom.trim(),
             email:registerData.email.trim(),
