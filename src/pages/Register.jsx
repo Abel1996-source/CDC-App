@@ -44,7 +44,7 @@ const Register=()=>{
             console.log(error);
             setRegiste(false)
             setErrorregiste(true)
-            setError(error.response.data.message)
+           // setError(error.response.data.message)
             setTimeout(function() {
                 setErrorregiste(false)
               }, 3000);
